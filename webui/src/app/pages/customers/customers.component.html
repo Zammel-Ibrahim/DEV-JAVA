@@ -1,0 +1,22 @@
+<div class="pad-16">
+
+    <h3> Loading  clients Data </h3>
+    <p style="width:1000px"> This is the actual list of clients.  the data is loaded dynamically 
+        when scrolling.
+    </p>
+    <br/>
+    <ngx-datatable
+        style='width:1000px;'
+        [rows]="rows"
+        [columns]="columns"
+        [headerHeight]="45"
+        [rowHeight]="'auto'"
+        [columnMode]="'standard'"
+        [scrollbarV]="false"
+        trackScroll
+        (bottom)='onScroll()'
+    >
+    </ngx-datatable>
+
+    <div *ngIf="isLoading" class="spinner spinner-lg">Loading...</div>
+</div>

@@ -1,0 +1,49 @@
+
+<mat-card class="example-card">
+  <mat-card-header>
+    <mat-card-title>Update Component</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <form class="example-form">
+      <table class="example-full-width" cellspacing="0">
+        <tr>
+          <td>
+            <mat-form-field class="example-full-width">
+            <input matInput placeholder="productName" [(ngModel)]="productName" name="productName" >
+            </mat-form-field>
+          </td>
+        </tr>
+
+
+        <tr>
+          <td>
+            <mat-form-field class="example-full-width">
+            <input matInput placeholder="productCost" [(ngModel)]="productCost" name="productCost" required>
+            </mat-form-field>
+          </td>
+        </tr>
+
+
+        <tr>
+          <td>
+            <mat-form-field class="example-full-width">
+            <input matInput placeholder="productCategory" [(ngModel)]="productCategory" name="productCategory" required>
+            </mat-form-field>
+          </td>
+        </tr>
+
+
+        <tr>
+        <td><mat-form-field class="example-full-width">
+          <input matInput placeholder="productState" [(ngModel)]="productState"  name="productState"  required>
+        </mat-form-field></td>
+        </tr>
+    
+    </table>
+    </form>
+    <mat-spinner [style.display]="showSpinner ? 'block' : 'none'"></mat-spinner>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button (click)="updateProduct()" color="primary">Update Product</button>
+  </mat-card-actions>
+</mat-card>
